@@ -1,0 +1,28 @@
+
+<div fxLayout="column" fxLayoutAlign="center center" class="product-container">
+    <h2>Products Catalog</h2>
+    <table mat-table [dataSource]="products" class="mat-elevation-z8" style="width: 100%;">
+        <ng-container matColumnDef="Id">
+            <th mat-header-cell *matHeaderCellDef>ID</th>
+            <td mat-cell *matCellDef="let product">{{product.id}}</td>
+        </ng-container>
+        <ng-container matColumnDef="Name">
+            <th mat-header-cell *matHeaderCellDef>Name</th>
+            <td mat-cell *matCellDef="let product">{{product.name}}</td>
+        </ng-container>
+        <ng-container matColumnDef="Price">
+            <th mat-header-cell *matHeaderCellDef>Price</th>
+            <td mat-cell *matCellDef="let product">{{product.price}}</td>
+        </ng-container>
+        <ng-container matColumnDef="Stock">
+            <th mat-header-cell *matHeaderCellDef>Stock</th>
+            <td mat-cell *matCellDef="let product">{{product.stock}}</td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="header"></tr>
+        <tr mat-row *matRowDef="let row; columns: header;"></tr>
+    </table>
+
+
+    
+</div>
