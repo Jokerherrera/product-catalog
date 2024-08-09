@@ -3,6 +3,6 @@ import { AuthComponent } from './component/auth/auth.component';
 import { ProductComponent } from './component/product/product.component';
 
 export const routes: Routes = [
-    {path: 'login', component: AuthComponent},
+    {path: '', component: AuthComponent},
     {path: 'catalog', component: ProductComponent}
 ];
